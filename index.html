@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC n5ajk</title>
+    <style>
+        /* إعدادات الخط والصفحة الأساسية */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden; /* لمنع ظهور شريط التمرير */
+            background-color: #000; /* لون احتياطي في حال تأخر الفيديو */
+        }
+
+        /* تنسيق الفيديو في الخلفية */
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        /* الطبقة الزجاجية الشفافة */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(20, 0, 30, 0.3); /* لون داكن قليلاً لزيادة وضوح الأزرار */
+            backdrop-filter: blur(8px); /* تأثير الضبابية (الزجاج) */
+            z-index: -1;
+        }
+
+        /* تنسيق العنوان الرئيسي */
+        h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            text-align: center;
+            /* تأثير التوهج البنفسجي المتناسق مع الزر */
+            text-shadow: 
+                0 0 10px rgb(217, 176, 255),
+                0 0 20px rgb(191, 123, 255),
+                0 0 40px rgb(100, 61, 136);
+            animation: pulse 2s infinite alternate;
+        }
+
+        /* حاوية الأزرار لترتيبها بشكل عمودي مع مسافات */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px; /* مسافة كبيرة لمنع تداخل الظل السفلي للأزرار */
+            align-items: center;
+        }
+
+        /* 
+         ========================================
+         كود الزر كما هو (بدون تعديل في التصميم)
+         ========================================
+        */
+        button {
+         --glow-color: rgb(217, 176, 255);
+         --glow-spread-color: rgba(191, 123, 255, 0.781);
+         --enhanced-glow-color: rgb(231, 206, 255);
+         --btn-color: rgb(100, 61, 136);
+         border: .25em solid var(--glow-color);
+         padding: 1em 3em;
+         color: var(--glow-color);
+         font-size: 15px;
+         font-weight: bold;
+         background-color: var(--btn-color);
+         border-radius: 1em;
+         outline: none;
+         box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 1em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+         text-shadow: 0 0 .5em var(--glow-color);
+         position: relative;
+         transition: all 0.3s;
+         cursor: pointer; /* إضافة بسيطة لجعل المؤشر يد يدل على النقر */
+         text-transform: uppercase;
+         letter-spacing: 1px;
+        }
+
+        button::after {
+         pointer-events: none;
+         content: "";
+         position: absolute;
+         top: 120%;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         background-color: var(--glow-spread-color);
+         filter: blur(2em);
+         opacity: .7;
+         transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+        }
+
+        button:hover {
+         color: var(--btn-color);
+         background-color: var(--glow-color);
+         box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 2em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+        }
+
+        button:active {
+         box-shadow: 0 0 0.6em .25em var(--glow-color),
+                0 0 2.5em 2em var(--glow-spread-color),
+                inset 0 0 .5em .25em var(--glow-color);
+        }
+
+        /* حركة بسيطة للعنوان */
+        @keyframes pulse {
+            from { text-shadow: 0 0 10px rgb(217, 176, 255), 0 0 20px rgb(191, 123, 255); }
+            to { text-shadow: 0 0 20px rgb(217, 176, 255), 0 0 40px rgb(191, 123, 255), 0 0 60px rgb(100, 61, 136); }
+        }
+
+        /* تحسين العرض على الجوال */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            button { font-size: 13px; padding: 1em 2em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- فيديو الخلفية -->
+    <video autoplay muted loop id="bg-video">
+        <source src="n5ajk1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- الطبقة الشفافة -->
+    <div class="overlay"></div>
+
+    <!-- اسم الموقع المضيء -->
+    <h1>CC n5ajk</h1>
+
+    <!-- الأزرار -->
+    <div class="buttons-container">
+        
+        <!-- زر التحميل -->
+        <button onclick="window.location.href='https://www.mediafire.com/file/itli8n04gxw7twc/n5ajk.rar/file'">
+            Download
+        </button>
+
+        <!-- زر الانستقرام -->
+        <button onclick="window.location.href='https://www.instagram.com/n5ajk?igsh=ZHlyb3pqcjBkODBw'">
+            Instagram
+        </button>
+
+    </div>
+
+</body>
+</html>
